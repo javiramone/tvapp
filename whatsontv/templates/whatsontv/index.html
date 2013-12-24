@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		
+		{% load static %}
+
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		
+		<title>Whats_On_Tv_?</title>
+		<!--<link rel="stylesheet" href='{{ STATIC_URL }}css/styles.css' type="text/css" /> <!-- stylesheet personal-->
+		<!--<script type="text/javascript" src="js/css3-mediaqueries.js"></script> <!-- to call the 'brain' of our project -->
+		<style> 
+		body
+		{
+			background-image:url("{% static 'images/cartadeajuste.jpg' %}");
+			background-color:#cccccc;
+		}
+</style>
+	<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+<body >
+
+
+<div id="pagewrap">
+
+	<div id="header">
+		<img src="{% static 'images/rayasAjuste.jpg' %}" alt="header" />
+	</div>
+
+<div> <script type="text/javascript">
+var ahora = new Date()
+document.write(ahora.getHours())
+document.write(".")
+document.write(ahora.getMinutes())
+</script> </div>
+	
+	<div class="table">
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<a href="/channel/id=tve"><img src="{% static 'images/tve.jpg' %}" alt="tve_logo"  /> </a>
+				</div>
+			</div>
+			<div class="content_right">
+				<div class="description">
+					<h2>TVE</h2>
+					{% for row in rows1 %}
+					<script type="text/javascript">
+						var ahora = new Date();
+						var horaAct=ahora.getHours();
+						var horaProg = new String ("{{row.value}}");
+						
+						var splits = new Array();
+						splits=horaProg.split(":");
+						var horaInicioStr=new String (splits[1]);
+						var horaInicio= parseInt(horaInicioStr);
+						
+						var splits2 = new Array();
+						splits2=horaProg.split("/");
+						var parteDerecha=new String (splits2[1]);
+						
+						var splits3 = new Array();
+						splits3=parteDerecha.split(":");
+						var horaStrFin=new String (splits3[0]); 
+						var horaFin= parseInt(horaStrFin);
+
+						var horaActInt=parseInt(ahora.getHours());
+						var minActInt=parseInt(ahora.getMinutes());
+						if((horaFin-1==horaAct)||(horaInicio==horaAct)||(horaInicio+1==horaAct)||(horaInicio+2==horaAct)) {
+								document.write(" <li><a href=\"/program/id={{row.key}}\"> {{row.value}}</a></li> ");
+						} 
+					</script>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<a href="/channel/id=tve2"><img src="{% static 'images/la2.jpg' %}" alt="la2_logo"  /> </a>
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="description">
+					<h2>TVE2</h2>
+					{% for row in rows2 %}
+					<script type="text/javascript">
+						var ahora = new Date();
+						var horaAct=ahora.getHours();
+						var horaProg = new String ("{{row.value}}");
+						
+						var splits = new Array();
+						splits=horaProg.split(":");
+						var horaInicioStr=new String (splits[1]);
+						var horaInicio= parseInt(horaInicioStr);
+						
+						var splits2 = new Array();
+						splits2=horaProg.split("/");
+						var parteDerecha=new String (splits2[1]);
+						
+						var splits3 = new Array();
+						splits3=parteDerecha.split(":");
+						var horaStrFin=new String (splits3[0]); 
+						var horaFin= parseInt(horaStrFin);
+
+						var horaActInt=parseInt(ahora.getHours());
+						var minActInt=parseInt(ahora.getMinutes());
+						if((horaFin-1==horaAct)||(horaInicio==horaAct)||(horaInicio+1==horaAct)||(horaInicio+2==horaAct)) {
+								document.write(" <li><a href=\"/program/id={{row.key}}\"> {{row.value}}</a></li> ");
+						} 
+					</script>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<a href="/channel/id=antena3"><img src="{% static 'images/antena3.png' %}" alt="antena3_logo"  /> </a>
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="description">
+					<h2>ANTENA 3</h2>
+					{% for row in rows3 %}
+					<script type="text/javascript">
+						var ahora = new Date();
+						var horaAct=ahora.getHours();
+						var horaProg = new String ("{{row.value}}");
+						
+						var splits = new Array();
+						splits=horaProg.split(":");
+						var horaInicioStr=new String (splits[1]);
+						var horaInicio= parseInt(horaInicioStr);
+						
+						var splits2 = new Array();
+						splits2=horaProg.split("/");
+						var parteDerecha=new String (splits2[1]);
+						
+						var splits3 = new Array();
+						splits3=parteDerecha.split(":");
+						var horaStrFin=new String (splits3[0]); 
+						var horaFin= parseInt(horaStrFin);
+
+						var horaActInt=parseInt(ahora.getHours());
+						var minActInt=parseInt(ahora.getMinutes());
+						if((horaFin-1==horaAct)||(horaInicio==horaAct)||(horaInicio+1==horaAct)||(horaInicio+2==horaAct)) {
+								document.write(" <li><a href=\"/program/id={{row.key}}\"> {{row.value}}</a></li> ");
+						} 
+					</script>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<a href="/channel/id=cuatro"><img src="{% static 'images/cuatro.jpg' %}" alt="Cuatro_logo"  /> </a>
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="description">
+					<h2>CUATRO</h2>
+					{% for row in rows4 %}
+					<script type="text/javascript">
+						var ahora = new Date();
+						var horaAct=ahora.getHours();
+						var horaProg = new String ("{{row.value}}");
+						
+						var splits = new Array();
+						splits=horaProg.split(":");
+						var horaInicioStr=new String (splits[1]);
+						var horaInicio= parseInt(horaInicioStr);
+						
+						var splits2 = new Array();
+						splits2=horaProg.split("/");
+						var parteDerecha=new String (splits2[1]);
+						
+						var splits3 = new Array();
+						splits3=parteDerecha.split(":");
+						var horaStrFin=new String (splits3[0]); 
+						var horaFin= parseInt(horaStrFin);
+
+						var horaActInt=parseInt(ahora.getHours());
+						var minActInt=parseInt(ahora.getMinutes());
+						if((horaFin-1==horaAct)||(horaInicio==horaAct)||(horaInicio+1==horaAct)||(horaInicio+2==horaAct)) {
+								document.write(" <li><a href=\"/program/id={{row.key}}\"> {{row.value}}</a></li> ");
+						} 
+					</script>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<a href="/channel/id=telecinco"><img src="{% static 'images/telecinco.jpg' %}" alt="Telecinco_logo"  /> </a>
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="description">
+					<h2>TELECINCO</h2>
+					{% for row in rows5 %}
+					<script type="text/javascript">
+						var ahora = new Date();
+						var horaAct=ahora.getHours();
+						var horaProg = new String ("{{row.value}}");
+						
+						var splits = new Array();
+						splits=horaProg.split(":");
+						var horaInicioStr=new String (splits[1]);
+						var horaInicio= parseInt(horaInicioStr);
+						
+						var splits2 = new Array();
+						splits2=horaProg.split("/");
+						var parteDerecha=new String (splits2[1]);
+						
+						var splits3 = new Array();
+						splits3=parteDerecha.split(":");
+						var horaStrFin=new String (splits3[0]); 
+						var horaFin= parseInt(horaStrFin);
+
+						var horaActInt=parseInt(ahora.getHours());
+						var minActInt=parseInt(ahora.getMinutes());
+						if((horaFin-1==horaAct)||(horaInicio==horaAct)||(horaInicio+1==horaAct)||(horaInicio+2==horaAct)) {
+								document.write(" <li><a href=\"/program/id={{row.key}}\"> {{row.value}}</a></li> ");
+						} 
+					</script>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<a href="/channel/id=lasexta"><img src="{% static 'images/lasexta.jpeg' %}" alt="LaSexta_logo" /></a>
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="description">
+					<h2>La SEXTA</h2>
+					{% for row in rows6 %}
+					<script type="text/javascript">
+						var ahora = new Date();
+						var horaAct=ahora.getHours();
+						var horaProg = new String ("{{row.value}}");
+						
+						var splits = new Array();
+						splits=horaProg.split(":");
+						var horaInicioStr=new String (splits[1]);
+						var horaInicio= parseInt(horaInicioStr);
+						
+						var splits2 = new Array();
+						splits2=horaProg.split("/");
+						var parteDerecha=new String (splits2[1]);
+						
+						var splits3 = new Array();
+						splits3=parteDerecha.split(":");
+						var horaStrFin=new String (splits3[0]); 
+						var horaFin= parseInt(horaStrFin);
+
+						var horaActInt=parseInt(ahora.getHours());
+						var minActInt=parseInt(ahora.getMinutes());
+						if((horaFin-1==horaAct)||(horaInicio==horaAct)||(horaInicio+1==horaAct)||(horaInicio+2==horaAct)) {
+								document.write(" <li><a href=\"/program/id={{row.key}}\"> {{row.value}}</a></li> ");
+						} 
+					</script>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<a href="/more" target="_self"> <input type="button" name="boton" value="Aceptar" /> </a>
+	</div>
+	
+	<!-- <div class="footer">
+		<div id="footer_left">
+			<h4><a href="localhost:8080/TvApp/Client">HOME</a></h4>
+		</div>
+		<div id="footer_right">
+			<h4><a href="myFunction()">ACCOUNT</a></h4>
+		</div>
+		<button onclick="myFunction()">Try it</button> -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		
+		{% load static %}
+
+	<link rel="stylesheet" href="{% static 'css/styles_detail.css' %}">
+		
+		<title>Whats_On_Tv_?</title>
+		<!--<link rel="stylesheet" href='{{ STATIC_URL }}css/styles.css' type="text/css" /> <!-- stylesheet personal-->
+		<!--<script type="text/javascript" src="js/css3-mediaqueries.js"></script> <!-- to call the 'brain' of our project -->
+		<style> 
+		body
+		{
+			background-image:url("{% static 'images/cartadeajuste.jpg' %}");
+			background-color:#cccccc;
+		}
+</style>
+	</head>
+	<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+<body>
+
+
+<div id="pagewrap">
+
+	<div id="header">
+		<img src="{% static 'images/rayasAjuste.jpg' %}" alt="header" />
+	</div>
+	<div class="table">
+		<div class="content">
+			<div class="content_left">
+				<div class="icono">
+					<img src="{{STATIC_URL}}{{row.img}}" alt="{{row.name}}" />
+					
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="description">
+					<h2>{{ row.name }}</h2>
+					<a> DESCRIPCION: </a>
+					<p id="desc"> {{row.description}} </p>
+				</div>
+			</div>
+		</div>
+	<a href="javascript:history.back()" target="_self"> <input type="button" name="boton" value="Atras" /> </a>	
+	</div>
+	
+	<!-- <div class="footer">
+		<div id="footer_left">
+			<h4><a href="localhost:8080/TvApp/Client">HOME</a></h4>
+		</div>
+		<div id="footer_right">
+			<h4><a href="myFunction()">ACCOUNT</a></h4>
+		</div>
+		<button onclick="myFunction()">Try it</button> -->
+
+
+
+</body>
+</html>

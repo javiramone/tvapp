@@ -1,0 +1,198 @@
+
+img.fullscreen {
+	max-height: 100%;
+	max-width: 100%;
+}  
+	
+img.topscreen {
+	max-height: 50%;
+	max-width: 50%;
+} 	
+
+img.img_small {
+	height=100;
+	max-width: 50%;
+} 
+
+body {
+	font: 1em/150% Arial, Helvetica, sans-serif;
+	background-image: url ("images/rayasAjuste.jpg");
+}
+
+h1 {
+	font: bold 36px/100% Arial, Helvetica, sans-serif;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	padding: 5px;
+	width: 1020px;
+	margin: 20px auto;
+}
+#header {
+	height: 180px;
+}
+
+#header img {
+	width: 1020px;
+	height: 180px;
+}
+.table{
+	width: 1019px;
+	height:740px;
+}
+
+.content_left {
+	width: 130px;
+	height: 130px;
+	float: left;
+	text-align:center;
+	margin-bottom:15px;
+}
+
+.icono img {
+	width: 130px;
+	height: 170px;
+}
+
+.content_right {
+	width: 205px;
+	height: 170px;
+	float: left;
+	margin-bottom:15px;
+}
+.description {
+	
+}
+
+.description li {
+	float:top;
+}
+
+.footer {
+	width: 960px;
+	height: 50px;
+	clear:both;
+	top:600px;
+	position:fixed;
+	background-color:#127E1D
+}
+#footer_left {
+	width: 300px;
+	height: 45px;
+	position:fixed;
+	margin-left:10px;
+	border: solid 3px #ccc;
+	text-align:center;
+	color: #000000;
+	
+}
+#footer_right {
+	width: 300px;
+	height: 45px;
+	position:fixed;
+	margin-left:644px;
+	border: solid 3px #ccc;
+	text-align:center;
+	
+}
+
+a:link {
+position:relative;
+color: #ff0000;
+font: 1em/150% Arial, Helvetica, sans-serif;
+
+}
+a:hover {
+position:relative;
+color: #00ff00;
+font: 1em/150% Arial, Helvetica, sans-serif;
+}
+a:active {
+color: #0000ff;
+font: 1.2em/150% Arial, Helvetica, sans-serif;
+}
+
+/* border & guideline (you can ignore these) */
+.content_right {
+	background: #f8f8f8;
+}
+.content_right {
+	background: #f0efef;
+}
+#header, .footer ,.table{
+	margin-bottom: 5px;
+}
+#pagewrap, #header, .content_left, .content_right, .footer , .table{
+	border: solid 1px #ccc;
+}
+
+
+/* for 980px or less */
+/*@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+
+}
+
+/* for 700px or less */
+/*@media screen and (max-width: 700px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (min-device-width : 800px) and (max-device-width : 1024px){ 
+	#pagewrap {
+		width:700px;
+		height: 300px;
+		margin-left:0px;
+	}
+	
+.footer {
+	width: 960px;
+	height: 50px;
+	clear:both;
+	top:400px;
+	position:fixed;
+	background-color:#127E1D
+}
+#footer_left {
+	width: 150px;
+	height: 45px;
+	position:fixed;
+	margin-left:10px;
+	border: solid 3px #ccc;
+	text-align:center;
+	color: #000000;
+	
+}
+#footer_right {
+	width: 150px;
+	height: 45px;
+	position:fixed;
+	margin-left:792px;
+	border: solid 3px #ccc;
+	text-align:center;
+	
+}
+	
+}	
